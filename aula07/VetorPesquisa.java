@@ -25,13 +25,13 @@ public class VetorPesquisa {
                 return meio;
             }
             contCompara++;
-            if (chave < v[meio]) {
+            if (chave < v[meio]) {  // troca para '>' se o vetor estiver ordenado decrescente
                 fim = meio - 1;
             } else {
                 inicio = meio + 1;
             }
         }
-        return -1;
+        return -1; // return -meio; 
     }
 
     public int pesquisaBinariaRec(int chave) {
