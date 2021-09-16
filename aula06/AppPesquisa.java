@@ -9,7 +9,7 @@ public class AppPesquisa {
          * VetorPesquisa pesquisa = new VetorPesquisa(vet);
          */
 
-        VetorPesquisa pesquisa = new VetorPesquisa(20);
+/*         VetorPesquisa pesquisa = new VetorPesquisa(20);
 
         pesquisa.gerarVetor();
         System.out.println(pesquisa);
@@ -23,7 +23,19 @@ public class AppPesquisa {
         System.out.println(pesquisa.buscaSeq(13));
         System.out.println("Comparações feitas: " + pesquisa.getContCompara());
         System.out.println(pesquisa.buscaSeqOrdenada(13));
-        System.out.println("Comparações feitas: " + pesquisa.getContCompara());
+        System.out.println("Comparações feitas: " + pesquisa.getContCompara()); */
+
+        final int TAM_VETOR = 100000;
+        int[] vetor = new int[TAM_VETOR];
+
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] =  i * 2;
+        }
+        
+        VetorPesquisa pesquisa = new VetorPesquisa(vetor);
+        int chave = 91100;
+        System.out.println(pesquisa.buscaSeq(chave));
+        System.out.println("Comparações: " + pesquisa.getContCompara());
 
     }
 }
