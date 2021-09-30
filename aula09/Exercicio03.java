@@ -3,9 +3,9 @@ public class Exercicio03 {
 
     public static void main(String[] args) {
         int n = 6;
-        fib = new int[n];
+        fib = new int[n + 1];
 
-        System.out.println(fibRec(n));
+        System.out.println(fibRecRef(n));
     }
 
     private static int fibRec(int n) {
@@ -27,6 +27,16 @@ public class Exercicio03 {
         }
 
         return n1 + n2;
+    }
+
+    private static int fibRecRef(int n) {
+        if (n < 2)
+            return n;
+
+        if (fib[n] != 0) {
+            return fib[n];
+        }
+        return fibRec(n - 1) + fibRec(n - 2);
     }
 
 }
